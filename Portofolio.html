@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Dedi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-color: #000;
+      --text-color: #fff;
+    }
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Segoe UI', sans-serif;
+      transition: all 0.5s;
+    }
+    .foto-profil {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 0 0 30px #00ffff;
+      transition: transform 1s;
+    }
+    .foto-profil:hover {
+      transform: rotateY(360deg);
+    }
+    .card {
+      background-color: #222;
+      color: white;
+      border: none;
+      box-shadow: 0 0 15px #00ffff55;
+    }
+    .toggle-btn {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: #00ffff;
+      color: #000;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tombol Dark/Light Mode -->
+  <button class="toggle-btn" onclick="toggleMode()">🌙/☀️</button>
+
+  <header class="text-center py-5" data-aos="zoom-in">
+    <img src="foto.jpeg" class="foto-profil mb-3" width="200" height="200" alt="Foto Profil">
+    <h1>Dedi Irawan</h1>
+    <p>Mahasiswa Ilmu Komputer • Web Developer Pemula</p>
+    <a href="CV.pdf" class="btn btn-outline-info mt-3" download>📄 Unduh CV</a>
+  </header>
+
+  <section class="container py-5">
+    <div class="row">
+      <div class="col-md-6" data-aos="fade-justify">
+        <h2>Tentang Saya</h2>
+        <p>Lulusan SMK Negeri 1 Kualuh Hilir Jurusan Teknik Komputer dan
+Jaringan (TKJ) dengan pengalaman Praktek Kerja Lapangan (PKL)
+sebagai teknisi hardware komputer. Memiliki kemampuan dalam
+perakitan, perbaikan, dan perawatan perangkat komputer, serta
+pemasangan jaringan dasar. Terbiasa bekerja dengan tools
+troubleshooting hardware dan software. Disiplin, teliti, dan mampu
+bekerja secara mandiri maupun dalam tim.
+Saya juga tertarik pada pengembangan web, animasi, dan desain UI/UX.</p>
+       </div>
+      </div>
+    <div class="col-md-6" data-aos="fade-right">
+      <h2>Keahlian</h2>
+      <ul>
+        <h2>Tools</h2>
+        <li>Microsoft Office</li>
+        <li>Software Desain Foto & Vidio</li>
+        <li>HTML, CSS, JavaScript</li>
+        <li>UI/UX Design (Figma)</li>
+        <li>Netlyfi & GitHub</li>
+        <li>Arduino uno</li>
+        <li>Instalasi Pc/Laptop</li>
+        <li>Bootstrap</li>
+      </ul>
+    </div>
+  </section>
+  <!-- Projek -->
+  <section class="container py-5">
+    <h2 class="text-center mb-4" data-aos="flip-up">Projek Saya</h2>
+    <div class="row">
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="card p-3 mb-4">
+          <h4>Website Portfolio</h4>
+          <p>Portfolio interaktif dengan Bootstrap & animasi 3D.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-up">
+        <div class="card p-3 mb-4">
+          <h4> Website Absensi Murid</h4>
+          <p>Website absensi murid dengan laravel dan livewire</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-right">
+        <div class="card p-3 mb-4">
+          <h4>Projek Skripsi</h4>
+          <p>Sistem pemantauan suhu fermentasi tempe berbasis iot menggunakan sensor ds18b20 dan microkontroler untuk optimalisai produksi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- Kontak -->
+  <section id="contact">
+    <div class="col-md-6" data-aos="fade-left">
+    <h2>Kontak Saya</h2>
+    <ul>
+    <li>No.Hp  : 0822-7232-8614</li>
+    <li>Email   : <a href="#">idedi1793@gmail.com</a></li>
+    <li>Instagram: <a href="#">@badiirawan</a></li>
+    </ul>
+    </div>
+  </section>
+
+  <!-- Form Kontak -->
+  <section class="container py-5">
+    <h2 class="text-center mb-4" data-aos="fade-up">Hubungi Saya</h2>
+    <form action="https://formspree.io/f/mwpqqwqn" method="POST" data-aos="fade-up">
+      <div class="mb-3">
+        <label class="form-label">Nama</label>
+        <input type="text" name="nama" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" name="email" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Pesan</label>
+        <textarea name="pesan" class="form-control" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-info">Kirim Pesan</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dedi Irawan • Portofolio HTML</p>
+  </footer>
+
+  <!-- Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function toggleMode() {
+      const isDark = document.body.style.background === "white";
+      document.body.style.background = isDark ? "#000" : "white";
+      document.body.style.color = isDark ? "white" : "black";
+    }
+  </script>
+</body>
+</html>
